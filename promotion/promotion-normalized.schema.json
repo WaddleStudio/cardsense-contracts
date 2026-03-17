@@ -1,0 +1,163 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://cardsense.com/schemas/promotion-normalized.schema.json",
+    "title": "Normalized Promotion Schema",
+    "description": "Schema for normalized credit card promotions in CardSense platform",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "promo_id",
+        "promo_version_id",
+        "card_id",
+        "bank",
+        "categories",
+        "channel",
+        "start_date",
+        "end_date",
+        "min_amount",
+        "reward_type",
+        "reward_rate",
+        "reward_cap",
+        "frequency_limit",
+        "requires_registration",
+        "excluded_conditions",
+        "source_url",
+        "summary",
+        "raw_text_hash",
+        "extractor_version",
+        "extracted_at",
+        "confidence"
+    ],
+    "properties": {
+        "promo_id": {
+            "type": "string",
+            "description": "Stable logical ID for the promotion (bank + card + campaign)"
+        },
+        "promo_version_id": {
+            "type": "string",
+            "description": "Immutable version ID, changes with any semantic update"
+        },
+        "card_id": {
+            "type": "string",
+            "description": "ID of the credit card associated with the promotion"
+        },
+        "bank": {
+            "type": "string",
+            "description": "Name of the issuing bank"
+        },
+        "categories": {
+            "type": "array",
+            "description": "List of categories the promotion applies to",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "dining",
+                    "travel",
+                    "online_shopping",
+                    "groceries",
+                    "fuel",
+                    "entertainment",
+                    "other"
+                ]
+            },
+            "uniqueItems": true
+        },
+        "channel": {
+            "type": "string",
+            "description": "Channel where the promotion is applicable",
+            "enum": [
+                "online",
+                "offline",
+                "all"
+            ]
+        },
+        "start_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of the promotion (ISO-8601 YYYY-MM-DD)"
+        },
+        "end_date": {
+            "type": "string",
+            "format": "date",
+            "description": "End date of the promotion (ISO-8601 YYYY-MM-DD)"
+        },
+        "min_amount": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Minimum spend amount in smallest currency unit (e.g., cents)"
+        },
+        "reward_type": {
+            "type": "string",
+            "description": "Type of reward offered",
+            "enum": [
+                "cashback",
+                "points",
+                "miles"
+            ]
+        },
+        "reward_rate": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Reward rate as a decimal (e.g., 0.05 for 5%)"
+        },
+        "reward_cap": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "minimum": 0,
+            "description": "Maximum reward amount in smallest currency unit, or null if uncapped"
+        },
+        "frequency_limit": {
+            "type": "string",
+            "description": "Frequency limit for the promotion",
+            "enum": [
+                "monthly",
+                "quarterly",
+                "yearly",
+                "once"
+            ]
+        },
+        "requires_registration": {
+            "type": "boolean",
+            "description": "Whether the promotion requires prior registration"
+        },
+        "excluded_conditions": {
+            "type": "array",
+            "description": "List of conditions or MCCs excluded from the promotion",
+            "items": {
+                "type": "string"
+            }
+        },
+        "source_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL of the original promotion page"
+        },
+        "summary": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "Human-readable summary of the promotion"
+        },
+        "raw_text_hash": {
+            "type": "string",
+            "description": "Hash of the raw text content to detect changes"
+        },
+        "extractor_version": {
+            "type": "string",
+            "description": "Version of the extractor used to parse this data"
+        },
+        "extracted_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the data was extracted (ISO-8601)"
+        },
+        "confidence": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Confidence score of the extraction"
+        }
+    }
+}
