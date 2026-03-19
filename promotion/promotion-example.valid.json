@@ -1,29 +1,36 @@
 {
-    "promo_id": "bank_a_card_x_campaign_2023_q4",
-    "promo_version_id": "v1.0.0",
-    "card_id": "card_x",
-    "bank": "Bank A",
-    "categories": [
-        "dining",
-        "online_shopping"
-    ],
-    "channel": "all",
-    "start_date": "2023-10-01",
-    "end_date": "2023-12-31",
-    "min_amount": 1000,
-    "reward_type": "cashback",
-    "reward_rate": 0.05,
-    "reward_cap": 5000,
-    "frequency_limit": "monthly",
-    "requires_registration": true,
-    "excluded_conditions": [
-        "MCC 1234",
-        "International transactions"
-    ],
-    "source_url": "https://www.bank-a.com/promotions/card-x/2023-q4",
-    "summary": "Get 5% cashback on dining and online shopping with Card X.",
-    "raw_text_hash": "a1b2c3d4e5f6...",
-    "extractor_version": "1.2.3",
-    "extracted_at": "2023-10-02T10:00:00Z",
-    "confidence": 0.95
+  "promoId": "31fdf33fd7fed9fe02bc0dae0d525d92",
+  "promoVersionId": "567cabf9b2144d36eceb1ef5466fcbdb669a8faaf4d3a0f1804c537050740b83",
+  "title": "春季線上訂票回饋",
+  "cardCode": "CTBC_DEMO_ONLINE",
+  "cardName": "中國信託 示例網購卡",
+  "cardStatus": "ACTIVE",
+  "annualFee": 1800,
+  "applyUrl": "https://example.com/cards/ctbc-demo-online",
+  "bankCode": "CTBC",
+  "bankName": "中國信託",
+  "category": "ONLINE",
+  "channel": "ONLINE",
+  "cashbackType": "PERCENT",
+  "cashbackValue": 3.0,
+  "minAmount": 500,
+  "maxCashback": 300,
+  "frequencyLimit": "MONTHLY",
+  "requiresRegistration": true,
+  "validFrom": "2026-03-01",
+  "validUntil": "2026-06-30",
+  "conditions": [
+    { "type": "TEXT", "value": "TRIP.COM", "label": "trip.com 線上訂票適用" },
+    { "type": "LOCATION_ONLY", "value": "TAIPEI", "label": "限 TAIPEI 適用" }
+  ],
+  "excludedConditions": [
+    { "type": "LOCATION_EXCLUDE", "value": "KAOHSIUNG", "label": "排除 KAOHSIUNG" }
+  ],
+  "sourceUrl": "https://example.com/promotions/ctbc-online-spring",
+  "summary": "春季線上訂票回饋",
+  "rawTextHash": "a578f918616dac7537b787668c24e842d6d61f5c09b704c413e6a731ff277b30",
+  "extractorVersion": "extractor-0.1.0",
+  "extractedAt": "2026-03-19T05:58:49Z",
+  "confidence": 1.0,
+  "status": "ACTIVE"
 }
