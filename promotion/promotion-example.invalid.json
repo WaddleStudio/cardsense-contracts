@@ -14,6 +14,15 @@
   "maxCashback": -1,
   "frequencyLimit": "DAILY",
   "requiresRegistration": "yes",
+  "stackability": {
+    "benefitLayer": "UNKNOWN_LAYER",
+    "relationshipMode": "AUTO",
+    "priority": -1,
+    "requiresPromoVersionIds": [123],
+    "excludesPromoVersionIds": "all",
+    "stackWithPromoVersionIds": [],
+    "notes": 999
+  },
   "validFrom": "2026-09-01",
   "validUntil": "2026-08-01",
   "conditions": ["not-an-object"],

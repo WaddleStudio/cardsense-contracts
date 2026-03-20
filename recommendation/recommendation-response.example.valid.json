@@ -1,0 +1,100 @@
+{
+  "requestId": "req_abc12345",
+  "scenario": {
+    "amount": 1200,
+    "category": "DINING",
+    "date": "2026-03-18",
+    "location": "台北市信義區",
+    "channel": "ONLINE",
+    "merchantName": "FoodPanda",
+    "paymentMethod": "APPLE_PAY",
+    "installmentCount": 1,
+    "newCustomer": false,
+    "customerSegment": "MASS",
+    "membershipTier": "GOLD",
+    "tags": ["WEEKEND", "APP_CHECKOUT"],
+    "attributes": {
+      "merchantGroup": "DELIVERY",
+      "campaignCode": "SPRING-2026"
+    }
+  },
+  "comparison": {
+    "mode": "STACK_ALL_ELIGIBLE",
+    "evaluatedPromotionCount": 42,
+    "eligiblePromotionCount": 5,
+    "rankedCardCount": 2,
+    "breakEvenEvaluated": true,
+    "breakEvenAnalyses": [
+      {
+        "leftCardCode": "CTBC_LINEPAY",
+        "rightCardCode": "ESUN_ALLONE",
+        "leftPromoVersionId": "ver_fixed_001",
+        "rightPromoVersionId": "ver_percent_003",
+        "breakEvenAmount": 1667,
+        "variableRewardCapAmount": 2000,
+        "leftMinAmount": 0,
+        "rightMinAmount": 1000,
+        "summary": "中國信託 示例網購卡 與 玉山 Example 卡的理論 break-even 約在 1667 元。"
+      }
+    ],
+    "notes": [
+      "多優惠並存模式已由 promotion.stackability 顯式 metadata 控制；未標註 metadata 的舊資料不得直接視為可並存。"
+    ]
+  },
+  "recommendations": [
+    {
+      "cardCode": "CTBC_LINEPAY",
+      "cardName": "中國信託 示例網購卡",
+      "bankCode": "CTBC",
+      "bankName": "中國信託",
+      "cashbackType": "PERCENT",
+      "cashbackValue": 3.0,
+      "estimatedReturn": 86,
+      "matchedPromotionCount": 2,
+      "rankingMode": "STACK_ALL_ELIGIBLE",
+      "reason": "中國信託 示例網購卡在此情境下命中 2 個可並存優惠，合計預估回饋 86 元。",
+      "promotionId": "promo_456",
+      "promoVersionId": "ver_789",
+      "validUntil": "2026-06-30",
+      "conditions": [
+        { "type": "MIN_SPEND", "value": "1000", "label": "最低消費 1000 元" },
+        { "type": "REGISTRATION_REQUIRED", "value": "true", "label": "需登錄活動" }
+      ],
+      "promotionBreakdown": [
+        {
+          "promotionId": "promo_456",
+          "promoVersionId": "ver_789",
+          "title": "主優惠 3% 回饋",
+          "cashbackType": "PERCENT",
+          "cashbackValue": 3.0,
+          "estimatedReturn": 36,
+          "cappedReturn": 36,
+          "contributesToCardTotal": true,
+          "assumedStackable": false,
+          "validUntil": "2026-06-30",
+          "conditions": [
+            { "type": "MIN_SPEND", "value": "1000", "label": "最低消費 1000 元" }
+          ],
+          "reason": "依 stackability metadata 判定可計入卡片總回饋。"
+        },
+        {
+          "promotionId": "promo_456_bonus",
+          "promoVersionId": "ver_790",
+          "title": "加碼固定回饋 50 元",
+          "cashbackType": "FIXED",
+          "cashbackValue": 50,
+          "estimatedReturn": 50,
+          "cappedReturn": 50,
+          "contributesToCardTotal": true,
+          "assumedStackable": false,
+          "validUntil": "2026-06-30",
+          "conditions": [],
+          "reason": "依 stackability metadata 判定可計入卡片總回饋。"
+        }
+      ],
+      "applyUrl": "https://affiliate.example.com/ctbc-linepay"
+    }
+  ],
+  "generatedAt": "2026-03-18T14:30:00Z",
+  "disclaimer": "CardSense 提供信用卡優惠比較資訊，不構成金融建議。實際回饋依各銀行公告為準，請以銀行官網資訊為最終依據。"
+}

@@ -1,0 +1,36 @@
+{
+  "amount": 1200,
+  "category": "DINING",
+  "cardCodes": ["CTBC_LINEPAY", "ESUN_ALLONE"],
+  "registeredPromotionIds": ["ver_789"],
+  "benefitUsage": [
+    { "promoVersionId": "ver_789", "consumedAmount": 120 }
+  ],
+  "location": "台北市信義區",
+  "date": "2026-03-18",
+  "scenario": {
+    "amount": 1200,
+    "category": "DINING",
+    "date": "2026-03-18",
+    "location": "台北市信義區",
+    "channel": "ONLINE",
+    "merchantName": "FoodPanda",
+    "paymentMethod": "APPLE_PAY",
+    "installmentCount": 1,
+    "newCustomer": false,
+    "customerSegment": "MASS",
+    "membershipTier": "GOLD",
+    "tags": ["WEEKEND", "APP_CHECKOUT"],
+    "attributes": {
+      "merchantGroup": "DELIVERY",
+      "campaignCode": "SPRING-2026"
+    }
+  },
+  "comparison": {
+    "mode": "STACK_ALL_ELIGIBLE",
+    "includePromotionBreakdown": true,
+    "includeBreakEvenAnalysis": true,
+    "maxResults": 5,
+    "compareCardCodes": ["CTBC_LINEPAY", "ESUN_ALLONE"]
+  }
+}

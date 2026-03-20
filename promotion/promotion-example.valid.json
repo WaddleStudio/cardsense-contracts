@@ -17,6 +17,16 @@
   "maxCashback": 300,
   "frequencyLimit": "MONTHLY",
   "requiresRegistration": true,
+  "stackability": {
+    "benefitLayer": "BASE",
+    "relationshipMode": "MUTUALLY_EXCLUSIVE",
+    "groupId": "ctbc-demo-online-base-2026q2",
+    "priority": 100,
+    "requiresPromoVersionIds": [],
+    "excludesPromoVersionIds": ["567cabf9b2144d36eceb1ef5466fcbdb669a8faaf4d3a0f1804c537050740b84"],
+    "stackWithPromoVersionIds": ["567cabf9b2144d36eceb1ef5466fcbdb669a8faaf4d3a0f1804c537050740b85"],
+    "notes": "主優惠與同組 base benefit 僅能擇一，但可與指定 merchant-funded booster 並存。"
+  },
   "validFrom": "2026-03-01",
   "validUntil": "2026-06-30",
   "conditions": [

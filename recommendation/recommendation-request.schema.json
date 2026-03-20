@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cardsense.com/schemas/recommendation-request.schema.json",
+  "title": "Recommendation Request Schema",
+  "description": "Schema for CardSense scenario-driven recommendation requests.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "amount": { "type": "integer", "minimum": 0 },
+    "category": {
+      "type": "string",
+      "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+    },
+    "cardCodes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 3 },
+      "uniqueItems": true
+    },
+    "registeredPromotionIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 3 },
+      "uniqueItems": true
+    },
+    "benefitUsage": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/benefitUsage" }
+    },
+    "location": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "date": { "type": "string", "format": "date" },
+    "scenario": { "$ref": "#/$defs/scenario" },
+    "comparison": { "$ref": "#/$defs/comparisonOptions" }
+  },
+  "allOf": [
+    {
+      "anyOf": [
+        { "required": ["amount"] },
+        {
+          "required": ["scenario"],
+          "properties": {
+            "scenario": { "required": ["amount"] }
+          }
+        }
+      ]
+    },
+    {
+      "anyOf": [
+        { "required": ["category"] },
+        {
+          "required": ["scenario"],
+          "properties": {
+            "scenario": { "required": ["category"] }
+          }
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "benefitUsage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["promoVersionId", "consumedAmount"],
+      "properties": {
+        "promoVersionId": { "type": "string", "minLength": 3 },
+        "consumedAmount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": { "type": "integer", "minimum": 0 },
+        "category": {
+          "type": "string",
+          "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+        },
+        "date": { "type": "string", "format": "date" },
+        "location": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "channel": { "type": "string", "enum": ["ONLINE", "OFFLINE", "ALL"] },
+        "merchantName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "merchantId": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "paymentMethod": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "installmentCount": { "type": "integer", "minimum": 1, "maximum": 60 },
+        "newCustomer": { "type": "boolean" },
+        "customerSegment": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "membershipTier": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "uniqueItems": true
+        },
+        "attributes": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "maxProperties": 32
+        }
+      }
+    },
+    "comparisonOptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "type": "string", "enum": ["BEST_SINGLE_PROMOTION", "STACK_ALL_ELIGIBLE"] },
+        "includePromotionBreakdown": { "type": "boolean" },
+        "includeBreakEvenAnalysis": { "type": "boolean" },
+        "maxResults": { "type": "integer", "minimum": 1, "maximum": 50 },
+        "compareCardCodes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

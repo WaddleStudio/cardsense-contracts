@@ -19,6 +19,7 @@
     "minAmount",
     "frequencyLimit",
     "requiresRegistration",
+    "recommendationScope",
     "validFrom",
     "validUntil",
     "conditions",
@@ -56,6 +57,8 @@
     "maxCashback": { "type": ["integer", "null"], "minimum": 0 },
     "frequencyLimit": { "type": "string", "enum": ["MONTHLY", "QUARTERLY", "YEARLY", "ONCE", "NONE"] },
     "requiresRegistration": { "type": "boolean" },
+    "recommendationScope": { "type": "string", "enum": ["RECOMMENDABLE", "CATALOG_ONLY", "FUTURE_SCOPE"] },
+    "stackability": { "$ref": "#/$defs/stackability" },
     "validFrom": { "type": "string", "format": "date" },
     "validUntil": { "type": "string", "format": "date" },
     "conditions": {
@@ -83,6 +86,39 @@
         "type": { "type": "string", "minLength": 3 },
         "value": { "type": "string", "minLength": 1 },
         "label": { "type": "string", "minLength": 1, "maxLength": 120 }
+      }
+    },
+    "stackability": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["benefitLayer", "relationshipMode", "priority", "requiresPromoVersionIds", "excludesPromoVersionIds", "stackWithPromoVersionIds"],
+      "properties": {
+        "benefitLayer": {
+          "type": "string",
+          "enum": ["BASE", "BONUS", "MILESTONE", "WELCOME", "INSTALLMENT", "MERCHANT_FUNDED", "MANUAL"]
+        },
+        "relationshipMode": {
+          "type": "string",
+          "enum": ["ALWAYS_STACKABLE", "MUTUALLY_EXCLUSIVE", "CONDITIONAL", "MANUAL_REVIEW"]
+        },
+        "groupId": { "type": ["string", "null"], "minLength": 3, "maxLength": 120 },
+        "priority": { "type": "integer", "minimum": 0, "maximum": 1000 },
+        "requiresPromoVersionIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 },
+          "uniqueItems": true
+        },
+        "excludesPromoVersionIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 },
+          "uniqueItems": true
+        },
+        "stackWithPromoVersionIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 },
+          "uniqueItems": true
+        },
+        "notes": { "type": ["string", "null"], "minLength": 1, "maxLength": 240 }
       }
     }
   }

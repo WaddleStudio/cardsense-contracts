@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cardsense.com/schemas/recommendation-response.schema.json",
+  "title": "Recommendation Response Schema",
+  "description": "Schema for CardSense card-level recommendation responses.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["requestId", "scenario", "comparison", "recommendations", "generatedAt", "disclaimer"],
+  "properties": {
+    "requestId": { "type": "string", "minLength": 8 },
+    "scenario": { "$ref": "#/$defs/scenario" },
+    "comparison": { "$ref": "#/$defs/comparisonSummary" },
+    "recommendations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/cardRecommendation" },
+      "maxItems": 50
+    },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "disclaimer": { "type": "string", "minLength": 8, "maxLength": 300 }
+  },
+  "$defs": {
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value", "label"],
+      "properties": {
+        "type": { "type": "string", "minLength": 3 },
+        "value": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1, "maxLength": 120 }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "category"],
+      "properties": {
+        "amount": { "type": "integer", "minimum": 0 },
+        "category": {
+          "type": "string",
+          "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+        },
+        "date": { "type": ["string", "null"], "format": "date" },
+        "location": { "type": ["string", "null"], "minLength": 1, "maxLength": 160 },
+        "channel": { "type": ["string", "null"], "enum": ["ONLINE", "OFFLINE", "ALL", null] },
+        "merchantName": { "type": ["string", "null"], "minLength": 1, "maxLength": 120 },
+        "merchantId": { "type": ["string", "null"], "minLength": 1, "maxLength": 80 },
+        "paymentMethod": { "type": ["string", "null"], "minLength": 1, "maxLength": 80 },
+        "installmentCount": { "type": ["integer", "null"], "minimum": 1, "maximum": 60 },
+        "newCustomer": { "type": ["boolean", "null"] },
+        "customerSegment": { "type": ["string", "null"], "minLength": 1, "maxLength": 80 },
+        "membershipTier": { "type": ["string", "null"], "minLength": 1, "maxLength": 80 },
+        "tags": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "uniqueItems": true
+        },
+        "attributes": {
+          "type": ["object", "null"],
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "maxProperties": 32
+        }
+      }
+    },
+    "comparisonSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "evaluatedPromotionCount", "eligiblePromotionCount", "rankedCardCount", "breakEvenEvaluated", "breakEvenAnalyses", "notes"],
+      "properties": {
+        "mode": { "type": "string", "enum": ["BEST_SINGLE_PROMOTION", "STACK_ALL_ELIGIBLE"] },
+        "evaluatedPromotionCount": { "type": "integer", "minimum": 0 },
+        "eligiblePromotionCount": { "type": "integer", "minimum": 0 },
+        "rankedCardCount": { "type": "integer", "minimum": 0 },
+        "breakEvenEvaluated": { "type": "boolean" },
+        "breakEvenAnalyses": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/breakEvenAnalysis" }
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 240 }
+        }
+      }
+    },
+    "breakEvenAnalysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["leftCardCode", "rightCardCode", "leftPromoVersionId", "rightPromoVersionId", "breakEvenAmount", "summary"],
+      "properties": {
+        "leftCardCode": { "type": "string", "minLength": 3 },
+        "rightCardCode": { "type": "string", "minLength": 3 },
+        "leftPromoVersionId": { "type": "string", "minLength": 3 },
+        "rightPromoVersionId": { "type": "string", "minLength": 3 },
+        "breakEvenAmount": { "type": "integer", "minimum": 0 },
+        "variableRewardCapAmount": { "type": ["integer", "null"], "minimum": 0 },
+        "leftMinAmount": { "type": ["integer", "null"], "minimum": 0 },
+        "rightMinAmount": { "type": ["integer", "null"], "minimum": 0 },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 240 }
+      }
+    },
+    "promotionRewardBreakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["promotionId", "promoVersionId", "title", "cashbackType", "cashbackValue", "estimatedReturn", "cappedReturn", "contributesToCardTotal", "assumedStackable", "validUntil", "conditions", "reason"],
+      "properties": {
+        "promotionId": { "type": "string", "minLength": 3 },
+        "promoVersionId": { "type": "string", "minLength": 3 },
+        "title": { "type": ["string", "null"], "minLength": 1, "maxLength": 200 },
+        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
+        "cashbackValue": { "type": "number", "minimum": 0 },
+        "estimatedReturn": { "type": "integer", "minimum": 0 },
+        "cappedReturn": { "type": "integer", "minimum": 0 },
+        "contributesToCardTotal": { "type": "boolean" },
+        "assumedStackable": { "type": "boolean" },
+        "validUntil": { "type": ["string", "null"], "format": "date" },
+        "conditions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/condition" }
+        },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 240 }
+      }
+    },
+    "cardRecommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cardCode", "cardName", "bankCode", "bankName", "cashbackType", "cashbackValue", "estimatedReturn", "matchedPromotionCount", "rankingMode", "reason", "promotionId", "promoVersionId", "validUntil", "conditions", "promotionBreakdown"],
+      "properties": {
+        "cardCode": { "type": ["string", "null"], "minLength": 3 },
+        "cardName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "bankCode": { "type": ["string", "null"], "enum": ["CTBC", "ESUN", "TAISHIN", "CATHAY", "MEGA", "FUBON", "FIRST", "SINOPAC", "TPBANK", "UBOT", null] },
+        "bankName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
+        "cashbackValue": { "type": "number", "minimum": 0 },
+        "estimatedReturn": { "type": "integer", "minimum": 0 },
+        "matchedPromotionCount": { "type": "integer", "minimum": 0 },
+        "rankingMode": { "type": "string", "enum": ["BEST_SINGLE_PROMOTION", "STACK_ALL_ELIGIBLE"] },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "promotionId": { "type": ["string", "null"], "minLength": 3 },
+        "promoVersionId": { "type": ["string", "null"], "minLength": 3 },
+        "validUntil": { "type": ["string", "null"], "format": "date" },
+        "conditions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/condition" }
+        },
+        "promotionBreakdown": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/promotionRewardBreakdown" }
+        },
+        "applyUrl": { "type": ["string", "null"], "format": "uri" }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 # CardSense Contracts — VIBE_SPEC
-### Updated: 2026-03-19
+### Updated: 2026-03-20
 
 ## Purpose
 This repository defines the single source of truth for data contracts shared between CardSense API and Extractor.
@@ -28,6 +28,7 @@ This repo contains no runtime code.
 | `maxCashback` | Integer nullable | Reward cap |
 | `frequencyLimit` | FrequencyLimit | MONTHLY, QUARTERLY, YEARLY, ONCE, NONE |
 | `requiresRegistration` | boolean | Whether benefit needs registration |
+| `stackability` | Stackability nullable | Explicit coexistence / exclusivity metadata for deterministic stacking |
 | `validFrom` | LocalDate | ISO-8601 |
 | `validUntil` | LocalDate | ISO-8601 |
 | `conditions` | List<Condition> | Structured conditions |
@@ -51,35 +52,103 @@ public record Condition(
 
 ## API DTO: RecommendationRequest
 ```java
-public record RecommendationRequest(
-    String category,
-    Integer amount,
-    List<String> cardCodes,
-    List<String> registeredPromotionIds,
-    List<BenefitUsage> benefitUsage,
-    String location,
-    LocalDate date
-) {}
+public class RecommendationRequest {
+    Integer amount;
+    String category;
+    List<String> cardCodes;
+    List<String> registeredPromotionIds;
+    List<BenefitUsage> benefitUsage;
+    String location;
+    LocalDate date;
+    RecommendationScenario scenario;
+    RecommendationComparisonOptions comparison;
+}
 
-public record BenefitUsage(
-    String promoVersionId,
-    Integer consumedAmount
-) {}
+public class RecommendationScenario {
+    Integer amount;
+    String category;
+    LocalDate date;
+    String location;
+    String channel;
+    String merchantName;
+    String merchantId;
+    String paymentMethod;
+    Integer installmentCount;
+    Boolean newCustomer;
+    String customerSegment;
+    String membershipTier;
+    List<String> tags;
+    Map<String, String> attributes;
+}
+
+public class RecommendationComparisonOptions {
+    ComparisonMode mode;
+    Boolean includePromotionBreakdown;
+    Boolean includeBreakEvenAnalysis;
+    Integer maxResults;
+    List<String> compareCardCodes;
+}
+
+public enum ComparisonMode {
+    BEST_SINGLE_PROMOTION,
+    STACK_ALL_ELIGIBLE
+}
+
+public class BenefitUsage {
+    String promoVersionId;
+    Integer consumedAmount;
+}
 ```
 
 ## API DTO: RecommendationResponse
 ```java
-public record CardRecommendation(
-    String cardName,
-    String bankName,
-    String cashbackType,
-    BigDecimal cashbackValue,
-    Integer estimatedReturn,
-    String reason,
-    String promotionId,
-    String promoVersionId,
-    LocalDate validUntil,
-    List<Condition> conditions,
-    String applyUrl
-) {}
+public class RecommendationResponse {
+    String requestId;
+    RecommendationScenario scenario;
+    RecommendationComparisonSummary comparison;
+    List<CardRecommendation> recommendations;
+    LocalDateTime generatedAt;
+    String disclaimer;
+}
+
+public class CardRecommendation {
+    String cardCode;
+    String cardName;
+    String bankCode;
+    String bankName;
+    String cashbackType;
+    BigDecimal cashbackValue;
+    Integer estimatedReturn;
+    Integer matchedPromotionCount;
+    String rankingMode;
+    String reason;
+    String promotionId;
+    String promoVersionId;
+    LocalDate validUntil;
+    List<Condition> conditions;
+    List<PromotionRewardBreakdown> promotionBreakdown;
+    String applyUrl;
+}
 ```
+
+## Stackability Object
+```java
+public class Stackability {
+    String benefitLayer;
+    String relationshipMode;
+    String groupId;
+    Integer priority;
+    List<String> requiresPromoVersionIds;
+    List<String> excludesPromoVersionIds;
+    List<String> stackWithPromoVersionIds;
+    String notes;
+}
+```
+
+### Stackability Rules
+- `benefitLayer` tells the engine whether the promotion is a base reward, bonus, milestone, welcome reward, installment reward, merchant-funded booster, or manual-only artifact.
+- `relationshipMode=ALWAYS_STACKABLE` means the promotion can coexist unless an explicit exclusion blocks it.
+- `relationshipMode=MUTUALLY_EXCLUSIVE` means promotions in the same `groupId` must not be summed together.
+- `relationshipMode=CONDITIONAL` means the engine must resolve `requiresPromoVersionIds`, `excludesPromoVersionIds`, and optional `stackWithPromoVersionIds` before stacking.
+- `relationshipMode=MANUAL_REVIEW` means the contract intentionally opts out of automatic deterministic stacking.
+- Any semantic change to stackability metadata requires a new `promoVersionId`.

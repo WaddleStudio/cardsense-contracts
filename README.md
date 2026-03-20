@@ -10,6 +10,11 @@ CardSense 平台的共用資料契約庫。
 - 定義列舉型別：`Category`、`CashbackType`、`FrequencyLimit`、`CardType`、`BankCode`
 - 提供合法/非法 JSON 範例供下游 repo 測試
 
+## 目錄
+- `promotion/`: normalized promotion schema、範例與 stackability metadata 設計
+- `recommendation/`: recommendation request / response 正式 JSON schema 與範例
+- `taxonomy/`: category、channel、frequency taxonomy
+
 ## 本 repo 不做的事
 - 不包含爬蟲或資料擷取邏輯
 - 不包含 API 端點實作
@@ -22,6 +27,23 @@ CardSense 平台的共用資料契約庫。
 - `cashbackValue` 一律以百分比格式表示，例如 `3.00`
 - `promoVersionId` 為語義版本識別碼，任何語義變更都必須更新
 - Extractor 與 API 必須以同一份 schema 交換資料
+
+## Recommendation API 契約方向
+API request / response 目前已演進為 scenario-driven contract，重點如下：
+
+- request 同時支援 legacy top-level `amount/category/location/date` 與 nested `scenario`
+- `scenario` 可攜帶通路、商戶、付款方式、新戶狀態、會員層級、tags 與自由擴充 attributes
+- `comparison.mode` 明確區分 `BEST_SINGLE_PROMOTION` 與 `STACK_ALL_ELIGIBLE`
+- response 以 card-level recommendation 為主，保留代表 promotion 以維持相容性
+- response 可回傳 `promotionBreakdown` 與 `breakEvenAnalyses`，讓前端或下游系統解釋比較結果
+
+這代表 Recommendation contract 不應再被視為「單 promotion 排名結果」，而是「特定情境下的卡片比較結果」。
+
+目前 shared contracts 已補上 `promotion.stackability`，用來顯式描述：
+- 哪些優惠永遠可疊加
+- 哪些優惠屬於互斥群組
+- 哪些優惠需要依賴其他優惠才可生效
+- 哪些優惠需要人工判斷，不應進 deterministic stack mode
 
 ## 核心列舉型別
 
