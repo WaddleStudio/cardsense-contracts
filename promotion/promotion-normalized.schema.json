@@ -58,6 +58,7 @@
     "frequencyLimit": { "type": "string", "enum": ["MONTHLY", "QUARTERLY", "YEARLY", "ONCE", "NONE"] },
     "requiresRegistration": { "type": "boolean" },
     "recommendationScope": { "type": "string", "enum": ["RECOMMENDABLE", "CATALOG_ONLY", "FUTURE_SCOPE"] },
+    "eligibilityType": { "type": ["string", "null"], "enum": ["GENERAL", "PROFESSION_SPECIFIC", "BUSINESS", null] },
     "stackability": { "$ref": "#/$defs/stackability" },
     "validFrom": { "type": "string", "format": "date" },
     "validUntil": { "type": "string", "format": "date" },
