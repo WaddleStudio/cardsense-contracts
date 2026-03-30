@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cardsense.com/schemas/benefit-plan.schema.json",
+  "title": "BenefitPlan Schema",
+  "description": "Schema for credit card benefit plan switching (e.g. CUBE, Richart, Unicard)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "planId",
+    "bankCode",
+    "cardCode",
+    "planName",
+    "planDescription",
+    "switchFrequency",
+    "requiresSubscription",
+    "exclusiveGroup",
+    "status",
+    "validFrom",
+    "validUntil"
+  ],
+  "properties": {
+    "planId": { "type": "string", "minLength": 3 },
+    "bankCode": {
+      "type": "string",
+      "enum": ["CTBC", "ESUN", "TAISHIN", "CATHAY", "MEGA", "FUBON", "FIRST", "SINOPAC", "TPBANK", "UBOT"]
+    },
+    "cardCode": { "type": "string", "minLength": 3 },
+    "planName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "planDescription": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "switchFrequency": { "type": "string", "enum": ["DAILY", "MONTHLY", "UNLIMITED"] },
+    "switchMaxPerMonth": { "type": ["integer", "null"], "minimum": 1 },
+    "requiresSubscription": { "type": "boolean" },
+    "subscriptionCost": { "type": ["string", "null"], "maxLength": 100 },
+    "exclusiveGroup": { "type": "string", "minLength": 3 },
+    "status": { "type": "string", "enum": ["ACTIVE", "EXPIRED"] },
+    "validFrom": { "type": "string", "format": "date" },
+    "validUntil": { "type": "string", "format": "date" }
+  }
+}

@@ -119,6 +119,17 @@
         "reason": { "type": "string", "minLength": 1, "maxLength": 240 }
       }
     },
+    "activePlan": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["planId", "planName", "switchRequired", "switchFrequency"],
+      "properties": {
+        "planId": { "type": "string", "minLength": 3 },
+        "planName": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "switchRequired": { "type": "boolean" },
+        "switchFrequency": { "type": "string", "minLength": 1, "maxLength": 60 }
+      }
+    },
     "cardRecommendation": {
       "type": "object",
       "additionalProperties": false,
@@ -144,7 +155,8 @@
           "type": "array",
           "items": { "$ref": "#/$defs/promotionRewardBreakdown" }
         },
-        "applyUrl": { "type": ["string", "null"], "format": "uri" }
+        "applyUrl": { "type": ["string", "null"], "format": "uri" },
+        "activePlan": { "$ref": "#/$defs/activePlan" }
       }
     }
   }
