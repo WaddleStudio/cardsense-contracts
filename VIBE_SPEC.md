@@ -1,5 +1,5 @@
 # CardSense Contracts — VIBE_SPEC
-### Updated: 2026-03-20
+### Updated: 2026-04-01
 
 ## Purpose
 This repository defines the single source of truth for data contracts shared between CardSense API and Extractor.
