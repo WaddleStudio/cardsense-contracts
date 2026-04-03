@@ -50,6 +50,7 @@
       "type": "string",
       "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
     },
+    "subcategory": { "type": "string", "default": "GENERAL" },
     "channel": { "type": ["string", "null"], "enum": ["ONLINE", "OFFLINE", "ALL", null] },
     "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
     "cashbackValue": { "type": "number", "minimum": 0.01 },

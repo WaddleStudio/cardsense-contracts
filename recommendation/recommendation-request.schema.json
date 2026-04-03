@@ -11,6 +11,7 @@
       "type": "string",
       "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
     },
+    "subcategory": { "type": "string" },
     "cardCodes": {
       "type": "array",
       "items": { "type": "string", "minLength": 3 },
@@ -73,6 +74,7 @@
           "type": "string",
           "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
         },
+        "subcategory": { "type": "string" },
         "date": { "type": "string", "format": "date" },
         "location": { "type": "string", "minLength": 1, "maxLength": 160 },
         "channel": { "type": "string", "enum": ["ONLINE", "OFFLINE", "ALL"] },

@@ -39,6 +39,7 @@
           "type": "string",
           "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
         },
+        "subcategory": { "type": ["string", "null"] },
         "date": { "type": ["string", "null"], "format": "date" },
         "location": { "type": ["string", "null"], "minLength": 1, "maxLength": 160 },
         "channel": { "type": ["string", "null"], "enum": ["ONLINE", "OFFLINE", "ALL", null] },
@@ -139,6 +140,7 @@
         "cardName": { "type": "string", "minLength": 1, "maxLength": 120 },
         "bankCode": { "type": ["string", "null"], "enum": ["CTBC", "ESUN", "TAISHIN", "CATHAY", "MEGA", "FUBON", "FIRST", "SINOPAC", "TPBANK", "UBOT", null] },
         "bankName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "subcategory": { "type": ["string", "null"] },
         "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
         "cashbackValue": { "type": "number", "minimum": 0 },
         "estimatedReturn": { "type": "integer", "minimum": 0 },
