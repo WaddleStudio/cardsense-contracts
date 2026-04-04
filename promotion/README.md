@@ -14,7 +14,7 @@ Key fields:
 - `promoId`, `promoVersionId`
 - `cardCode`, `cardName`, `cardStatus`, `annualFee`, `applyUrl`
 - `bankCode`, `bankName`
-- `category`, `channel`
+- `category`, `subcategory`, `channel`
 - `cashbackType`, `cashbackValue`, `minAmount`, `maxCashback`
 - `frequencyLimit`, `requiresRegistration`
 - `stackability`
@@ -42,6 +42,12 @@ Recommended types:
 - `MIN_SPEND`
 - `REGISTRATION_REQUIRED`
 - `FREQUENCY_LIMIT`
+
+## Category vs Subcategory
+
+- `category` is the stable top-level grouping used by product flows and recommendation matching.
+- `subcategory` carries finer merchant/program context and should be the default expansion path when new bank-specific distinctions appear.
+- Canonical subcategory names live in `taxonomy/subcategory-taxonomy.json`.
 
 ## Stackability Metadata
 `stackability` makes promotion coexistence explicit so downstream recommendation engines do not need to guess whether `STACK_ALL_ELIGIBLE` is safe.
