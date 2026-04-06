@@ -37,6 +37,7 @@ cd cardsense-contracts
 
 ```text
 cardsense-contracts/
+├── benefit-plan/       # benefit-plan.schema.json（權益切換卡方案定義）
 ├── promotion/          # normalized promotion schema、範例、stackability metadata
 ├── recommendation/     # recommendation request / response JSON schema 與範例
 └── taxonomy/           # category、subcategory、channel、frequency taxonomy
@@ -56,8 +57,8 @@ cardsense-contracts/
 
 - request 同時支援 legacy top-level 欄位與 nested `scenario`
 - `scenario` 可攜帶通路、商戶、付款方式、會員層級、tags 與自由擴充 attributes
-- `comparison.mode` 明確區分 `BEST_SINGLE_PROMOTION` 與 `STACK_ALL_ELIGIBLE`
-- response 以 card-level recommendation 為主，可回傳 `promotionBreakdown` 與 `breakEvenAnalyses`
+- 固定使用疊加優惠計算（`STACK_ALL_ELIGIBLE`），已移除 `BEST_SINGLE_PROMOTION`
+- response 以 card-level recommendation 為主，可回傳 `promotionBreakdown`、`breakEvenAnalyses`、`activePlan`
 
 ### Stackability Metadata
 
