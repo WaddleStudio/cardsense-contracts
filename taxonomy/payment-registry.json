@@ -11,6 +11,7 @@
   {"code": "IPASS_MONEY", "label": "iPASS MONEY", "subcategory": "MOBILE_PAY", "aliases": ["iPASS MONEY"]},
   {"code": "ICASH_PAY", "label": "icash Pay", "subcategory": "MOBILE_PAY", "aliases": ["icash Pay"]},
   {"code": "TWQR", "label": "TWQR", "subcategory": "MOBILE_PAY", "aliases": ["TWQR"]},
+  {"code": "TAIWAN_PAY", "label": "台灣 Pay", "subcategory": "MOBILE_PAY", "aliases": ["台灣Pay", "台灣 Pay"]},
   {"code": "HAPPY_GO_PAY", "label": "HAPPY GO Pay", "subcategory": "MOBILE_PAY", "aliases": ["HAPPY GO Pay"]},
   {"code": "HAMI_PAY", "label": "Hami Pay", "subcategory": "MOBILE_PAY", "aliases": ["Hami Pay"]}
 ]
