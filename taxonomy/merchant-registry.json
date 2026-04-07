@@ -7,18 +7,6 @@
   {"code": "TAOBAO", "label": "淘寶", "category": "ONLINE", "subcategory": "INTERNATIONAL_ECOMMERCE", "aliases": ["淘寶"]},
   {"code": "TMALL", "label": "天貓", "category": "ONLINE", "subcategory": "INTERNATIONAL_ECOMMERCE", "aliases": ["天貓"]},
 
-  {"code": "LINE_PAY", "label": "LINE Pay", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["LINE Pay"]},
-  {"code": "APPLE_PAY", "label": "Apple Pay", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["Apple Pay"]},
-  {"code": "GOOGLE_PAY", "label": "Google Pay", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["Google Pay"]},
-  {"code": "SAMSUNG_PAY", "label": "Samsung Pay", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["Samsung Pay"]},
-  {"code": "JKOPAY", "label": "街口支付", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["街口", "街口支付"]},
-  {"code": "ESUN_WALLET", "label": "玉山 Wallet", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["玉山WALLET電子支付", "玉山 Wallet電子支付"]},
-  {"code": "全支付", "label": "全支付", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["全支付"]},
-  {"code": "悠遊付", "label": "悠遊付", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["悠遊付"]},
-  {"code": "全盈_PAY", "label": "全盈+PAY", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["全盈+PAY"]},
-  {"code": "IPASS_MONEY", "label": "iPASS MONEY", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["iPASS MONEY"]},
-  {"code": "ICASH_PAY", "label": "icash Pay", "category": "ONLINE", "subcategory": "MOBILE_PAY", "aliases": ["icash Pay"]},
-
   {"code": "CHATGPT", "label": "ChatGPT", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["ChatGPT"]},
   {"code": "CLAUDE", "label": "Claude", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["Claude"]},
   {"code": "CURSOR", "label": "Cursor", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["Cursor"]},
