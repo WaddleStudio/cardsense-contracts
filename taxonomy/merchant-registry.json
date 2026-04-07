@@ -80,5 +80,78 @@
 
   {"code": "U_POWER", "label": "U-POWER", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["U-POWER"]},
   {"code": "EVOASIS", "label": "EVOASIS", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["EVOASIS"]},
-  {"code": "ICHARGING", "label": "iCharging", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["iCharging"]}
+  {"code": "ICHARGING", "label": "iCharging", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["iCharging"]},
+  {"code": "AMPGO", "label": "AMPGO", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["AMPGO"]},
+  {"code": "EVALUE", "label": "EVALUE", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["EVALUE"]},
+  {"code": "TAIL", "label": "TAIL", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["TAIL"]},
+  {"code": "TESLA_SUPERCHARGER", "label": "Tesla Supercharger", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["Tesla Supercharger"]},
+  {"code": "GOGORO_BATTERY", "label": "Gogoro 換電", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["Gogoro換電", "Gogoro 換電"]},
+  {"code": "NATIONWIDE_FAST_CHARGING", "label": "全國快充", "category": "OTHER", "subcategory": "EV_CHARGING", "aliases": ["全國快充"]},
+
+  {"code": "7_ELEVEN", "label": "7-ELEVEN", "category": "GROCERY", "subcategory": "CONVENIENCE_STORE", "aliases": ["7-ELEVEN", "7-11", "統一超商"]},
+  {"code": "FAMILYMART", "label": "全家", "category": "GROCERY", "subcategory": "CONVENIENCE_STORE", "aliases": ["全家", "全家便利商店", "FamilyMart"]},
+  {"code": "HI_LIFE", "label": "萊爾富", "category": "GROCERY", "subcategory": "CONVENIENCE_STORE", "aliases": ["萊爾富"]},
+  {"code": "OK_MART", "label": "OK超商", "category": "GROCERY", "subcategory": "CONVENIENCE_STORE", "aliases": ["OK超商", "OK"]},
+
+  {"code": "TSANN_KUEN", "label": "燦坤", "category": "SHOPPING", "subcategory": "ELECTRONICS", "aliases": ["燦坤"]},
+  {"code": "ELIFE", "label": "全國電子", "category": "SHOPPING", "subcategory": "ELECTRONICS", "aliases": ["全國電子"]},
+  {"code": "APPLE_STORE", "label": "Apple Store", "category": "SHOPPING", "subcategory": "ELECTRONICS", "aliases": ["Apple Store", "Apple 直營"]},
+  {"code": "MI_STORE", "label": "小米", "category": "SHOPPING", "subcategory": "ELECTRONICS", "aliases": ["小米"]},
+
+  {"code": "WOWPRIME", "label": "王品", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["王品", "王品集團"]},
+  {"code": "VOLTERRA_GROUP", "label": "饗賓餐旅", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["饗賓", "饗賓餐旅"]},
+  {"code": "TOFU_RESTAURANTS", "label": "豆府餐飲", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["豆府", "豆府餐飲"]},
+  {"code": "SABOTEN", "label": "勝博殿", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["勝博殿"]},
+  {"code": "COLD_STONE", "label": "Cold Stone", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["Cold Stone"]},
+  {"code": "EZTABLE", "label": "EZTABLE", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["EZTABLE"]},
+
+  {"code": "LALAPORT", "label": "LaLaport", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["LaLaport"]},
+
+  {"code": "DING_DING", "label": "丁丁藥局", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["丁丁藥局", "丁丁"]},
+  {"code": "GREAT_TREE", "label": "大樹藥局", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["大樹藥局", "大樹"]},
+
+  {"code": "HOLA", "label": "HOLA", "category": "OTHER", "subcategory": "HOME_LIVING", "aliases": ["HOLA"]},
+  {"code": "HOI", "label": "HOI", "category": "OTHER", "subcategory": "HOME_LIVING", "aliases": ["HOI"]},
+  {"code": "TR_PLUS", "label": "特力+", "category": "OTHER", "subcategory": "HOME_LIVING", "aliases": ["特力+", "TR+"]},
+
+  {"code": "IRENT", "label": "iRent", "category": "TRANSPORT", "subcategory": "RIDESHARE", "aliases": ["iRent"]},
+  {"code": "TAIWAN_TAXI", "label": "台灣大車隊", "category": "TRANSPORT", "subcategory": "RIDESHARE", "aliases": ["台灣大車隊"]},
+
+  {"code": "AIRBNB", "label": "Airbnb", "category": "OVERSEAS", "subcategory": "TRAVEL_PLATFORM", "aliases": ["Airbnb"]},
+  {"code": "ASIAYO", "label": "AsiaYo", "category": "OVERSEAS", "subcategory": "TRAVEL_PLATFORM", "aliases": ["AsiaYo"]},
+  {"code": "EXPEDIA", "label": "Expedia", "category": "OVERSEAS", "subcategory": "TRAVEL_PLATFORM", "aliases": ["Expedia"]},
+
+  {"code": "SHANFU_TRAVEL", "label": "山富旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["山富", "山富旅遊"]},
+  {"code": "PACIFIC_TRAVEL", "label": "太平洋旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["太平洋", "太平洋旅遊"]},
+  {"code": "GALILEE_TRAVEL", "label": "加利利旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["加利利", "加利利旅遊"]},
+  {"code": "COLA_TRAVEL", "label": "可樂旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["可樂", "可樂旅遊"]},
+  {"code": "SOUTHEAST_TRAVEL", "label": "東南旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["東南", "東南旅遊"]},
+  {"code": "SUNNYDAY_TRAVEL", "label": "晴天旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["晴天", "晴天旅遊"]},
+  {"code": "HUAYOU_TRAVEL", "label": "華友旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["華友", "華友旅遊"]},
+  {"code": "WUFU_TRAVEL", "label": "五福旅遊", "category": "OVERSEAS", "subcategory": "TRAVEL_AGENCY", "aliases": ["五福", "五福旅遊"]},
+
+  {"code": "JAPAN_AIRLINES", "label": "日本航空", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["日本航空", "JAL"]},
+  {"code": "SINGAPORE_AIRLINES", "label": "新加坡航空", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["新加坡航空"]},
+  {"code": "ANA", "label": "全日空", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["全日空", "ANA"]},
+  {"code": "PEACH", "label": "樂桃航空", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["樂桃航空", "Peach"]},
+  {"code": "SCOOT", "label": "酷航", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["酷航", "Scoot"]},
+  {"code": "TIGERAIR_TAIWAN", "label": "台灣虎航", "category": "TRANSPORT", "subcategory": "AIRLINE", "aliases": ["台灣虎航"]},
+
+  {"code": "YOUBIKE_2_0", "label": "YouBike 2.0", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["YouBike", "YouBike 2.0"]},
+  {"code": "ICOCA", "label": "ICOCA", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["ICOCA"]},
+  {"code": "SUICA", "label": "Suica", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["Suica"]},
+  {"code": "PASMO", "label": "PASMO", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["PASMO"]},
+
+  {"code": "CHEMAJI", "label": "車麻吉", "category": "OTHER", "subcategory": "PARKING", "aliases": ["車麻吉"]},
+  {"code": "UTAGGO", "label": "uTagGo", "category": "OTHER", "subcategory": "PARKING", "aliases": ["uTagGo"]},
+
+  {"code": "APPLE_MEDIA_SERVICES", "label": "Apple Media Services", "category": "ENTERTAINMENT", "subcategory": "STREAMING", "aliases": ["Apple Media Services", "Apple TV+", "Apple Music"]},
+  {"code": "GOOGLE_PLAY", "label": "Google Play", "category": "ENTERTAINMENT", "subcategory": "STREAMING", "aliases": ["Google Play"]},
+  {"code": "MAX", "label": "Max", "category": "ENTERTAINMENT", "subcategory": "STREAMING", "aliases": ["Max", "HBO Max"]},
+
+  {"code": "DUOLINGO", "label": "Duolingo", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["Duolingo"]},
+  {"code": "SPEAK", "label": "Speak", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["Speak"]},
+
+  {"code": "CUBE_SHOP", "label": "Cube Shop", "category": "ONLINE", "subcategory": "ECOMMERCE", "aliases": ["Cube Shop", "Cube 購物"]},
+  {"code": "MYFONE", "label": "myfone", "category": "ONLINE", "subcategory": "ECOMMERCE", "aliases": ["myfone", "myfone購物"]}
 ]

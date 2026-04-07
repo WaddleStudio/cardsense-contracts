@@ -122,5 +122,17 @@
   "GAS_STATION": {
     "category": "OTHER",
     "description": "Gas stations and fuel-station spend."
+  },
+  "PUBLIC_TRANSIT": {
+    "category": "TRANSPORT",
+    "description": "Public transit systems including trains, metro, and shared bikes."
+  },
+  "APPAREL": {
+    "category": "SHOPPING",
+    "description": "Clothing, fashion, and apparel retail."
+  },
+  "SPORTING_GOODS": {
+    "category": "SHOPPING",
+    "description": "Sporting goods, outdoor equipment, and athletic retailers."
   }
 }
