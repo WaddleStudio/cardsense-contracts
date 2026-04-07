@@ -11,9 +11,13 @@
     "category": "ENTERTAINMENT",
     "description": "Theme parks, amusement parks, and similar attraction tickets."
   },
-  "VENUE": {
+  "SINGING": {
     "category": "ENTERTAINMENT",
-    "description": "Entertainment venues such as KTV, bowling, and other leisure venues."
+    "description": "KTV, karaoke venues, and singing-related entertainment."
+  },
+  "LIVE_EVENT": {
+    "category": "ENTERTAINMENT",
+    "description": "Live performances, concerts, exhibitions, and stage events."
   },
   "STREAMING": {
     "category": "ENTERTAINMENT",
