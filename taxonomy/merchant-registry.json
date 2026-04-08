@@ -174,5 +174,15 @@
   {"code": "EVERGREEN", "label": "長榮酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["長榮酒店", "長榮桂冠"]},
   {"code": "MANDARIN_ORIENTAL", "label": "文華東方", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["文華東方", "Mandarin Oriental"]},
   {"code": "FUSHIN", "label": "馥森/馥蘭朵", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["馥森", "馥蘭朵", "Trio"]},
-  {"code": "HOTELDAY", "label": "承億酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["承億", "承億酒店"]}
+  {"code": "HOTELDAY", "label": "承億酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["承億", "承億酒店"]},
+  {"code": "H2O_HOTEL", "label": "水京棧國際酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["水京棧", "H2O Hotel"]},
+  {"code": "JR_EAST_HOTEL", "label": "JR東日本大飯店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["JR東日本大飯店", "JR東日本"]},
+  {"code": "SMITH_WOLLENSKY", "label": "Smith & Wollensky", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["Smith & Wollensky"]},
+  {"code": "BEITOU_DADI", "label": "北投大地酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["北投大地", "大地酒店"]},
+  {"code": "GRAND_MAYFULL", "label": "美福大飯店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["美福大飯店", "美福"]},
+  {"code": "ZHONGSHAN_CLUB", "label": "台中中山招待所", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["中山招待所"]},
+  {"code": "RAN_ONE", "label": "然一酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["然一酒店", "然一"]},
+  {"code": "BEN_TEPPANYAKI", "label": "犇鐵板燒", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["犇鐵板燒", "犇"]},
+  {"code": "VICTORIA", "label": "維多麗亞酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["維多麗亞", "維多麗亞酒店"]},
+  {"code": "PROMISEDLAND", "label": "花蓮理想大地", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["理想大地"]}
 ]
