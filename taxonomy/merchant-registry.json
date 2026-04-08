@@ -153,5 +153,20 @@
   {"code": "SPEAK", "label": "Speak", "category": "ONLINE", "subcategory": "AI_TOOL", "aliases": ["Speak"]},
 
   {"code": "CUBE_SHOP", "label": "Cube Shop", "category": "ONLINE", "subcategory": "ECOMMERCE", "aliases": ["Cube Shop", "Cube 購物"]},
-  {"code": "MYFONE", "label": "myfone", "category": "ONLINE", "subcategory": "ECOMMERCE", "aliases": ["myfone", "myfone購物"]}
+  {"code": "MYFONE", "label": "myfone", "category": "ONLINE", "subcategory": "ECOMMERCE", "aliases": ["myfone", "myfone購物"]},
+
+  {"code": "MARRIOTT", "label": "萬豪酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["萬豪", "Marriott", "萬豪酒店"]},
+  {"code": "HILTON", "label": "希爾頓", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["希爾頓", "Hilton"]},
+  {"code": "IHG", "label": "洲際酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["洲際", "IHG", "洲際酒店"]},
+  {"code": "SHANGRI_LA", "label": "香格里拉", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["香格里拉", "Shangri-La"]},
+  {"code": "HYATT", "label": "凱悅", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["凱悅", "Hyatt", "君悅"]},
+  {"code": "SHERATON", "label": "喜來登", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["喜來登", "Sheraton"]},
+  {"code": "REGENT", "label": "晶華酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["晶華", "Regent", "晶華酒店"]},
+  {"code": "ROYAL_HOTEL", "label": "老爺酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["老爺", "老爺酒店"]},
+  {"code": "HUMBLE_HOUSE", "label": "寒舍集團", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["寒舍", "寒舍艾美", "寒舍艾麗"]},
+  {"code": "CAESAR", "label": "凱撒飯店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["凱撒", "凱撒飯店"]},
+  {"code": "AMBASSADOR", "label": "國賓飯店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["國賓", "國賓飯店"]},
+  {"code": "HOWARD", "label": "福華飯店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["福華", "福華飯店"]},
+  {"code": "FLEUR_DE_CHINE", "label": "雲品溫泉酒店", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["雲品", "雲品溫泉"]},
+  {"code": "THE_LALU", "label": "涵碧樓", "category": "OVERSEAS", "subcategory": "HOTEL", "aliases": ["涵碧樓"]}
 ]
