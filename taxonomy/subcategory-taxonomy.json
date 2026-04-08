@@ -84,15 +84,15 @@
     "description": "Airline ticketing and airline-operated booking scenarios."
   },
   "HOTEL": {
-    "category": "OVERSEAS",
+    "category": "TRAVEL",
     "description": "Hotel accommodation and lodging scenarios."
   },
   "TRAVEL_PLATFORM": {
-    "category": "OVERSEAS",
+    "category": "TRAVEL",
     "description": "Travel booking and accommodation aggregator platforms."
   },
   "TRAVEL_AGENCY": {
-    "category": "OVERSEAS",
+    "category": "TRAVEL",
     "description": "Travel agencies and package-tour booking channels."
   },
   "OVERSEAS_IN_STORE": {
@@ -100,11 +100,11 @@
     "description": "Foreign in-store spending, including overseas restaurant and on-site hotel payments."
   },
   "EV_CHARGING": {
-    "category": "OTHER",
+    "category": "TRANSPORT",
     "description": "Electric-vehicle charging stations and charging-network spend."
   },
   "PARKING": {
-    "category": "OTHER",
+    "category": "TRANSPORT",
     "description": "Parking fees and parking-platform scenarios."
   },
   "SUPERMARKET": {
@@ -116,11 +116,11 @@
     "description": "Convenience stores and convenience-store chains."
   },
   "HOME_LIVING": {
-    "category": "OTHER",
+    "category": "SHOPPING",
     "description": "Home-living, furniture, and household-goods scenarios."
   },
   "GAS_STATION": {
-    "category": "OTHER",
+    "category": "TRANSPORT",
     "description": "Gas stations and fuel-station spend."
   },
   "PUBLIC_TRANSIT": {
