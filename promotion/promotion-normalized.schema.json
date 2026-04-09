@@ -48,11 +48,11 @@
     "bankName": { "type": "string", "minLength": 2, "maxLength": 100 },
     "category": {
       "type": "string",
-      "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+      "enum": ["DINING", "TRANSPORT", "ONLINE", "TRAVEL", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
     },
     "subcategory": { "type": "string", "default": "GENERAL" },
     "channel": { "type": ["string", "null"], "enum": ["ONLINE", "OFFLINE", "ALL", null] },
-    "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
+    "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS", "MILES"] },
     "cashbackValue": { "type": "number", "minimum": 0.01 },
     "minAmount": { "type": "integer", "minimum": 0 },
     "maxCashback": { "type": ["integer", "null"], "minimum": 0 },

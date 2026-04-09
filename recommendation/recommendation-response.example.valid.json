@@ -56,6 +56,14 @@
       "promotionId": "promo_456",
       "promoVersionId": "ver_789",
       "validUntil": "2026-06-30",
+      "rewardDetail": {
+        "rawReward": 86,
+        "rawUnit": "TWD",
+        "exchangeRate": 1,
+        "exchangeRateSource": "SYSTEM_DEFAULT",
+        "ntdEquivalent": 86,
+        "note": null
+      },
       "conditions": [
         { "type": "MIN_SPEND", "value": "1000", "label": "最低消費 1000 元" },
         { "type": "REGISTRATION_REQUIRED", "value": "true", "label": "需登錄活動" }
@@ -72,6 +80,14 @@
           "contributesToCardTotal": true,
           "assumedStackable": false,
           "validUntil": "2026-06-30",
+          "rewardDetail": {
+            "rawReward": 36,
+            "rawUnit": "TWD",
+            "exchangeRate": 1,
+            "exchangeRateSource": "SYSTEM_DEFAULT",
+            "ntdEquivalent": 36,
+            "note": null
+          },
           "conditions": [
             { "type": "MIN_SPEND", "value": "1000", "label": "最低消費 1000 元" }
           ],
@@ -88,6 +104,14 @@
           "contributesToCardTotal": true,
           "assumedStackable": false,
           "validUntil": "2026-06-30",
+          "rewardDetail": {
+            "rawReward": 50,
+            "rawUnit": "TWD",
+            "exchangeRate": 1,
+            "exchangeRateSource": "SYSTEM_DEFAULT",
+            "ntdEquivalent": 50,
+            "note": null
+          },
           "conditions": [],
           "reason": "依 stackability metadata 判定可計入卡片總回饋。"
         }

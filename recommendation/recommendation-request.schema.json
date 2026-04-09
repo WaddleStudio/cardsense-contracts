@@ -9,7 +9,7 @@
     "amount": { "type": "integer", "minimum": 0 },
     "category": {
       "type": "string",
-      "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+      "enum": ["DINING", "TRANSPORT", "ONLINE", "TRAVEL", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
     },
     "subcategory": { "type": "string" },
     "cardCodes": {
@@ -28,6 +28,14 @@
     },
     "location": { "type": "string", "minLength": 1, "maxLength": 160 },
     "date": { "type": "string", "format": "date" },
+    "customExchangeRates": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^(POINTS|MILES)\\.[A-Z_]+$"
+      },
+      "additionalProperties": { "type": "number", "minimum": 0 }
+    },
     "scenario": { "$ref": "#/$defs/scenario" },
     "comparison": { "$ref": "#/$defs/comparisonOptions" }
   },
@@ -72,7 +80,7 @@
         "amount": { "type": "integer", "minimum": 0 },
         "category": {
           "type": "string",
-          "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+          "enum": ["DINING", "TRANSPORT", "ONLINE", "TRAVEL", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
         },
         "subcategory": { "type": "string" },
         "date": { "type": "string", "format": "date" },

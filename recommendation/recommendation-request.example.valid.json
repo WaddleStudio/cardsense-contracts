@@ -8,6 +8,10 @@
   ],
   "location": "台北市信義區",
   "date": "2026-03-18",
+  "customExchangeRates": {
+    "MILES._DEFAULT": 0.6,
+    "POINTS.ESUN": 0.8
+  },
   "scenario": {
     "amount": 1200,
     "category": "DINING",
@@ -27,7 +31,6 @@
     }
   },
   "comparison": {
-    "mode": "STACK_ALL_ELIGIBLE",
     "includePromotionBreakdown": true,
     "includeBreakEvenAnalysis": true,
     "maxResults": 5,

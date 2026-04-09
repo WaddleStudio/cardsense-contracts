@@ -37,7 +37,7 @@
         "amount": { "type": "integer", "minimum": 0 },
         "category": {
           "type": "string",
-          "enum": ["DINING", "TRANSPORT", "ONLINE", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
+          "enum": ["DINING", "TRANSPORT", "ONLINE", "TRAVEL", "OVERSEAS", "SHOPPING", "GROCERY", "ENTERTAINMENT", "OTHER"]
         },
         "subcategory": { "type": ["string", "null"] },
         "date": { "type": ["string", "null"], "format": "date" },
@@ -106,7 +106,7 @@
         "promotionId": { "type": "string", "minLength": 3 },
         "promoVersionId": { "type": "string", "minLength": 3 },
         "title": { "type": ["string", "null"], "minLength": 1, "maxLength": 200 },
-        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
+        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS", "MILES"] },
         "cashbackValue": { "type": "number", "minimum": 0 },
         "estimatedReturn": { "type": "integer", "minimum": 0 },
         "cappedReturn": { "type": "integer", "minimum": 0 },
@@ -117,7 +117,21 @@
           "type": "array",
           "items": { "$ref": "#/$defs/condition" }
         },
-        "reason": { "type": "string", "minLength": 1, "maxLength": 240 }
+        "reason": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "rewardDetail": { "$ref": "#/$defs/rewardDetail" }
+      }
+    },
+    "rewardDetail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rawReward", "rawUnit", "exchangeRate", "exchangeRateSource", "ntdEquivalent"],
+      "properties": {
+        "rawReward": { "type": "number", "minimum": 0 },
+        "rawUnit": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "exchangeRate": { "type": "number", "minimum": 0 },
+        "exchangeRateSource": { "type": "string", "enum": ["SYSTEM_DEFAULT", "USER_CUSTOM"] },
+        "ntdEquivalent": { "type": "integer", "minimum": 0 },
+        "note": { "type": ["string", "null"], "minLength": 1, "maxLength": 120 }
       }
     },
     "activePlan": {
@@ -141,7 +155,7 @@
         "bankCode": { "type": ["string", "null"], "enum": ["CTBC", "ESUN", "TAISHIN", "CATHAY", "MEGA", "FUBON", "FIRST", "SINOPAC", "TPBANK", "UBOT", null] },
         "bankName": { "type": "string", "minLength": 1, "maxLength": 120 },
         "subcategory": { "type": ["string", "null"] },
-        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS"] },
+        "cashbackType": { "type": "string", "enum": ["PERCENT", "FIXED", "POINTS", "MILES"] },
         "cashbackValue": { "type": "number", "minimum": 0 },
         "estimatedReturn": { "type": "integer", "minimum": 0 },
         "matchedPromotionCount": { "type": "integer", "minimum": 0 },
@@ -158,7 +172,8 @@
           "items": { "$ref": "#/$defs/promotionRewardBreakdown" }
         },
         "applyUrl": { "type": ["string", "null"], "format": "uri" },
-        "activePlan": { "$ref": "#/$defs/activePlan" }
+        "activePlan": { "$ref": "#/$defs/activePlan" },
+        "rewardDetail": { "$ref": "#/$defs/rewardDetail" }
       }
     }
   }
