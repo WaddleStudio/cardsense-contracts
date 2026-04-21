@@ -184,5 +184,33 @@
   {"code": "RAN_ONE", "label": "然一酒店", "category": "TRAVEL", "subcategory": "HOTEL", "aliases": ["然一酒店", "然一"]},
   {"code": "BEN_TEPPANYAKI", "label": "犇鐵板燒", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["犇鐵板燒", "犇"]},
   {"code": "VICTORIA", "label": "維多麗亞酒店", "category": "TRAVEL", "subcategory": "HOTEL", "aliases": ["維多麗亞", "維多麗亞酒店"]},
-  {"code": "PROMISEDLAND", "label": "花蓮理想大地", "category": "TRAVEL", "subcategory": "HOTEL", "aliases": ["理想大地"]}
+  {"code": "PROMISEDLAND", "label": "花蓮理想大地", "category": "TRAVEL", "subcategory": "HOTEL", "aliases": ["理想大地"]},
+
+  {"code": "EVERRICH", "label": "昇恆昌", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["昇恆昌", "昇恆昌免稅"]},
+  {"code": "MIRAMAR", "label": "美麗華", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["美麗華", "美麗華百樂園"]},
+  {"code": "Q_SQUARE", "label": "京站時尚廣場", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["京站", "京站廣場"]},
+  {"code": "MITSUI_OUTLET", "label": "三井OUTLET", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["三井OUTLET", "三井"]},
+  {"code": "SHOWTIME_PLAZA", "label": "秀泰生活", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["秀泰生活", "秀泰廣場"]},
+  {"code": "MEGA_CITY_TAIPEI", "label": "統一時代百貨", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["統一時代百貨", "統一時代", "夢時代"]},
+  {"code": "HANSHIN", "label": "漢神百貨", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["漢神百貨", "漢神巨蛋"]},
+  {"code": "GLORIA_OUTLETS", "label": "華泰名品城", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["華泰名品城"]},
+  {"code": "TONLIN_FORESQUARE", "label": "統領廣場", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["統領廣場"]},
+  {"code": "FAR_EAST_GARDEN_CITY", "label": "遠東GARDEN CITY大巨蛋", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["遠東GARDEN_CITY", "GARDEN CITY", "大巨蛋"]},
+  {"code": "ESLITE", "label": "誠品", "category": "SHOPPING", "subcategory": "DEPARTMENT", "aliases": ["誠品", "誠品書店", "誠品生活", "誠品線上"]},
+
+  {"code": "KANPAI", "label": "乾杯燒肉", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["乾杯燒肉", "乾杯"]},
+  {"code": "THAI_TOWN", "label": "瓦城料理", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["瓦城料理", "瓦城"]},
+  {"code": "GENKI_SUSHI", "label": "爭鮮餐飲", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["爭鮮餐飲", "爭鮮"]},
+  {"code": "DING_WANG", "label": "鼎王餐飲", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["鼎王餐飲", "鼎王"]},
+
+  {"code": "TSAI_MENG", "label": "采盟旅遊", "category": "TRAVEL", "subcategory": "TRAVEL_AGENCY", "aliases": ["采盟", "采盟旅遊"]},
+
+  {"code": "POYA", "label": "寶雅", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["寶雅", "POYA"]},
+  {"code": "COSTCO", "label": "好市多", "category": "GROCERY", "subcategory": "WAREHOUSE", "aliases": ["好市多", "Costco"]},
+  {"code": "LOUISA", "label": "路易莎", "category": "DINING", "subcategory": "CAFE", "aliases": ["路易莎", "Louisa", "路易莎咖啡"]},
+  {"code": "C85", "label": "85度C", "category": "DINING", "subcategory": "CAFE", "aliases": ["85度C", "85°C"]},
+  {"code": "KFC", "label": "肯德基", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["肯德基", "KFC"]},
+  {"code": "MOS_BURGER", "label": "摩斯漢堡", "category": "DINING", "subcategory": "RESTAURANT", "aliases": ["摩斯漢堡", "摩斯"]},
+  {"code": "TPEMRT", "label": "台北捷運", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["台北捷運", "北捷", "MRT"]},
+  {"code": "KRTCO", "label": "高雄捷運", "category": "TRANSPORT", "subcategory": "PUBLIC_TRANSIT", "aliases": ["高雄捷運", "高捷"]}
 ]
