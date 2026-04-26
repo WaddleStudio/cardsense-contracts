@@ -41,6 +41,7 @@
 
   {"code": "COSMED", "label": "康是美", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["康是美"]},
   {"code": "WATSONS", "label": "屈臣氏", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["屈臣氏"]},
+  {"code": "POYA", "label": "寶雅", "category": "SHOPPING", "subcategory": "DRUGSTORE", "aliases": ["寶雅", "POYA"]},
 
   {"code": "CPC", "label": "台灣中油", "category": "TRANSPORT", "subcategory": "GAS_STATION", "aliases": ["台灣中油"]},
   {"code": "NATIONWIDE_GAS", "label": "全國加油", "category": "TRANSPORT", "subcategory": "GAS_STATION", "aliases": ["全國加油"]},
