@@ -1,138 +1,146 @@
-{
-  "GENERAL": {
-    "category": "ANY",
-    "description": "Fallback subcategory when a more specific mapping is unavailable."
-  },
-  "MOVIE": {
-    "category": "ENTERTAINMENT",
-    "description": "Movie theaters and cinema ticket scenarios."
-  },
-  "THEME_PARK": {
-    "category": "ENTERTAINMENT",
-    "description": "Theme parks, amusement parks, and similar attraction tickets."
-  },
-  "SINGING": {
-    "category": "ENTERTAINMENT",
-    "description": "KTV, karaoke venues, and singing-related entertainment."
-  },
-  "LIVE_EVENT": {
-    "category": "ENTERTAINMENT",
-    "description": "Live performances, concerts, exhibitions, and stage events."
-  },
-  "STREAMING": {
-    "category": "ENTERTAINMENT",
-    "description": "Streaming media and recurring digital entertainment services."
-  },
-  "DELIVERY": {
-    "category": "DINING",
-    "description": "Food-delivery platforms and delivery-specific dining scenarios."
-  },
-  "RESTAURANT": {
-    "category": "DINING",
-    "description": "Restaurants and general dining merchants."
-  },
-  "CAFE": {
-    "category": "DINING",
-    "description": "Coffee shops, cafes, and beverage-focused merchants."
-  },
-  "HOTEL_DINING": {
-    "category": "DINING",
-    "description": "Dining offers tied to hotels, buffets, or hotel-operated restaurants."
-  },
-  "DEPARTMENT": {
-    "category": "SHOPPING",
-    "description": "Department stores and department-store-like shopping malls."
-  },
-  "WAREHOUSE": {
-    "category": "SHOPPING",
-    "description": "Warehouse clubs, hypermarkets, and bulk-shopping chains."
-  },
-  "ELECTRONICS": {
-    "category": "SHOPPING",
-    "description": "3C, electronics, and home-appliance retailers."
-  },
-  "DRUGSTORE": {
-    "category": "SHOPPING",
-    "description": "Drugstores, cosmetics, and personal-care retail chains."
-  },
-  "ECOMMERCE": {
-    "category": "ONLINE",
-    "description": "Domestic ecommerce and mainstream online-shopping platforms."
-  },
-  "MOBILE_PAY": {
-    "category": "ONLINE",
-    "description": "Mobile wallet and electronic-payment scenarios."
-  },
-  "SUBSCRIPTION": {
-    "category": "ONLINE",
-    "description": "Recurring subscription, auto-renewal, or membership billing."
-  },
-  "INTERNATIONAL_ECOMMERCE": {
-    "category": "ONLINE",
-    "description": "Cross-border ecommerce and international online marketplaces."
-  },
-  "AI_TOOL": {
-    "category": "ONLINE",
-    "description": "AI tools and productivity software subscriptions."
-  },
-  "RIDESHARE": {
-    "category": "TRANSPORT",
-    "description": "Ride-hailing, taxi-dispatch, and short-term vehicle rental services."
-  },
-  "AIRLINE": {
-    "category": "TRANSPORT",
-    "description": "Airline ticketing and airline-operated booking scenarios."
-  },
-  "HOTEL": {
-    "category": "TRAVEL",
-    "description": "Hotel accommodation and lodging scenarios."
-  },
-  "TRAVEL_PLATFORM": {
-    "category": "TRAVEL",
-    "description": "Travel booking and accommodation aggregator platforms."
-  },
-  "TRAVEL_AGENCY": {
-    "category": "TRAVEL",
-    "description": "Travel agencies and package-tour booking channels."
-  },
-  "OVERSEAS_IN_STORE": {
-    "category": "OVERSEAS",
-    "description": "Foreign in-store spending, including overseas restaurant and on-site hotel payments."
-  },
-  "EV_CHARGING": {
-    "category": "TRANSPORT",
-    "description": "Electric-vehicle charging stations and charging-network spend."
-  },
-  "PARKING": {
-    "category": "TRANSPORT",
-    "description": "Parking fees and parking-platform scenarios."
-  },
-  "SUPERMARKET": {
-    "category": "GROCERY",
-    "description": "Supermarkets, grocery chains, and hypermarket grocery scenarios."
-  },
-  "CONVENIENCE_STORE": {
-    "category": "GROCERY",
-    "description": "Convenience stores and convenience-store chains."
-  },
-  "HOME_LIVING": {
-    "category": "SHOPPING",
-    "description": "Home-living, furniture, and household-goods scenarios."
-  },
-  "GAS_STATION": {
-    "category": "TRANSPORT",
-    "description": "Gas stations and fuel-station spend."
-  },
-  "PUBLIC_TRANSIT": {
-    "category": "TRANSPORT",
-    "description": "Public transit systems including trains, metro, and shared bikes."
-  },
-  "APPAREL": {
-    "category": "SHOPPING",
-    "description": "Clothing, fashion, and apparel retail."
-  },
-  "SPORTING_GOODS": {
-    "category": "SHOPPING",
-    "description": "Sporting goods, outdoor equipment, and athletic retailers."
-  }
+﻿{
+    "GENERAL":  {
+                    "category":  "ANY",
+                    "description":  "Fallback subcategory when a more specific mapping is unavailable."
+                },
+    "MOVIE":  {
+                  "category":  "ENTERTAINMENT",
+                  "description":  "Movie theaters and cinema ticket scenarios."
+              },
+    "THEME_PARK":  {
+                       "category":  "ENTERTAINMENT",
+                       "description":  "Theme parks, amusement parks, and similar attraction tickets."
+                   },
+    "SINGING":  {
+                    "category":  "ENTERTAINMENT",
+                    "description":  "KTV, karaoke venues, and singing-related entertainment."
+                },
+    "LIVE_EVENT":  {
+                       "category":  "ENTERTAINMENT",
+                       "description":  "Live performances, concerts, exhibitions, and stage events."
+                   },
+    "STREAMING":  {
+                      "category":  "ENTERTAINMENT",
+                      "description":  "Streaming media and recurring digital entertainment services."
+                  },
+    "DELIVERY":  {
+                     "category":  "DINING",
+                     "description":  "Food-delivery platforms and delivery-specific dining scenarios."
+                 },
+    "RESTAURANT":  {
+                       "category":  "DINING",
+                       "description":  "Restaurants and general dining merchants."
+                   },
+    "CAFE":  {
+                 "category":  "DINING",
+                 "description":  "Coffee shops, cafes, and beverage-focused merchants."
+             },
+    "HOTEL_DINING":  {
+                         "category":  "DINING",
+                         "description":  "Dining offers tied to hotels, buffets, or hotel-operated restaurants."
+                     },
+    "DEPARTMENT":  {
+                       "category":  "SHOPPING",
+                       "description":  "Department stores and department-store-like shopping malls."
+                   },
+    "WAREHOUSE":  {
+                      "category":  "SHOPPING",
+                      "description":  "Warehouse clubs, hypermarkets, and bulk-shopping chains."
+                  },
+    "ELECTRONICS":  {
+                        "category":  "SHOPPING",
+                        "description":  "3C, electronics, and home-appliance retailers."
+                    },
+    "DRUGSTORE":  {
+                      "category":  "SHOPPING",
+                      "description":  "Drugstores, cosmetics, and personal-care retail chains."
+                  },
+    "ECOMMERCE":  {
+                      "category":  "ONLINE",
+                      "description":  "Domestic ecommerce and mainstream online-shopping platforms."
+                  },
+    "MOBILE_PAY":  {
+                       "category":  "ONLINE",
+                       "description":  "Mobile wallet and electronic-payment scenarios."
+                   },
+    "SUBSCRIPTION":  {
+                         "category":  "ONLINE",
+                         "description":  "Recurring subscription, auto-renewal, or membership billing."
+                     },
+    "INTERNATIONAL_ECOMMERCE":  {
+                                    "category":  "ONLINE",
+                                    "description":  "Cross-border ecommerce and international online marketplaces."
+                                },
+    "AI_TOOL":  {
+                    "category":  "ONLINE",
+                    "description":  "AI tools and productivity software subscriptions."
+                },
+    "RIDESHARE":  {
+                      "category":  "TRANSPORT",
+                      "description":  "Ride-hailing, taxi-dispatch, and short-term vehicle rental services."
+                  },
+    "AIRLINE":  {
+                    "category":  "TRANSPORT",
+                    "description":  "Airline ticketing and airline-operated booking scenarios."
+                },
+    "HOTEL":  {
+                  "category":  "TRAVEL",
+                  "description":  "Hotel accommodation and lodging scenarios."
+              },
+    "TRAVEL_PLATFORM":  {
+                            "category":  "TRAVEL",
+                            "description":  "Travel booking and accommodation aggregator platforms."
+                        },
+    "TRAVEL_AGENCY":  {
+                          "category":  "TRAVEL",
+                          "description":  "Travel agencies and package-tour booking channels."
+                      },
+    "OVERSEAS_IN_STORE":  {
+                              "category":  "OVERSEAS",
+                              "description":  "Foreign in-store spending, including overseas restaurant and on-site hotel payments."
+                          },
+    "EV_CHARGING":  {
+                        "category":  "TRANSPORT",
+                        "description":  "Electric-vehicle charging stations and charging-network spend."
+                    },
+    "PARKING":  {
+                    "category":  "TRANSPORT",
+                    "description":  "Parking fees and parking-platform scenarios."
+                },
+    "SUPERMARKET":  {
+                        "category":  "GROCERY",
+                        "description":  "Supermarkets, grocery chains, and hypermarket grocery scenarios."
+                    },
+    "CONVENIENCE_STORE":  {
+                              "category":  "GROCERY",
+                              "description":  "Convenience stores and convenience-store chains."
+                          },
+    "HOME_LIVING":  {
+                        "category":  "SHOPPING",
+                        "description":  "Home-living, furniture, and household-goods scenarios."
+                    },
+    "GAS_STATION":  {
+                        "category":  "TRANSPORT",
+                        "description":  "Gas stations and fuel-station spend."
+                    },
+    "PUBLIC_TRANSIT":  {
+                           "category":  "TRANSPORT",
+                           "description":  "Public transit systems including trains, metro, and shared bikes."
+                       },
+    "APPAREL":  {
+                    "category":  "SHOPPING",
+                    "description":  "Clothing, fashion, and apparel retail."
+                },
+    "SPORTING_GOODS":  {
+                           "category":  "SHOPPING",
+                           "description":  "Sporting goods, outdoor equipment, and athletic retailers."
+                       },
+    "VENUE":  {
+                  "category":  "ENTERTAINMENT",
+                  "description":  "Entertainment venues such as KTV, bowling, and other leisure venues."
+              },
+    "CHARITY_DONATION":  {
+                             "category":  "OTHER",
+                             "description":  "Charity donations and public-interest giving scenarios."
+                         }
 }
