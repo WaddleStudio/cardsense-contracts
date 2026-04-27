@@ -568,6 +568,15 @@
                     ]
     },
     {
+        "code":  "GU",
+        "label":  "GU",
+        "category":  "SHOPPING",
+        "subcategory":  "APPAREL",
+        "aliases":  [
+                        "GU"
+                    ]
+    },
+    {
         "code":  "NET",
         "label":  "NET",
         "category":  "SHOPPING",
@@ -1098,6 +1107,28 @@
                     ]
     },
     {
+        "code":  "GO_TAXI_JP",
+        "label":  "日本GO Taxi App",
+        "category":  "TRANSPORT",
+        "subcategory":  "PUBLIC_TRANSIT",
+        "aliases":  [
+                        "日本GO Taxi App",
+                        "GO Taxi",
+                        "GO Taxi App"
+                    ]
+    },
+    {
+        "code":  "TAOYUAN_AIRPORT_MRT",
+        "label":  "桃園機場捷運",
+        "category":  "TRANSPORT",
+        "subcategory":  "PUBLIC_TRANSIT",
+        "aliases":  [
+                        "桃園機場捷運",
+                        "機場捷運",
+                        "桃捷"
+                    ]
+    },
+    {
         "code":  "CHEMAJI",
         "label":  "車麻吉",
         "category":  "TRANSPORT",
@@ -1543,6 +1574,38 @@
                     ]
     },
     {
+        "code":  "DON_DON_DONKI",
+        "label":  "台灣DON DON DONKI",
+        "category":  "SHOPPING",
+        "subcategory":  "DEPARTMENT",
+        "aliases":  [
+                        "台灣DON DON DONKI",
+                        "DON DON DONKI",
+                        "DONKI",
+                        "唐吉訶德"
+                    ]
+    },
+    {
+        "code":  "UNITED_ARROWS",
+        "label":  "UNITED ARROWS",
+        "category":  "SHOPPING",
+        "subcategory":  "APPAREL",
+        "aliases":  [
+                        "UNITED ARROWS",
+                        "UNITED ARROWS LTD."
+                    ]
+    },
+    {
+        "code":  "MING_YAO",
+        "label":  "明曜百貨",
+        "category":  "SHOPPING",
+        "subcategory":  "DEPARTMENT",
+        "aliases":  [
+                        "明曜百貨",
+                        "明曜"
+                    ]
+    },
+    {
         "code":  "SHOWTIME_PLAZA",
         "label":  "秀泰生活",
         "category":  "SHOPPING",
@@ -1642,6 +1705,17 @@
         "aliases":  [
                         "爭鮮餐飲",
                         "爭鮮"
+                    ]
+    },
+    {
+        "code":  "SUSHIRO",
+        "label":  "台灣壽司郎",
+        "category":  "DINING",
+        "subcategory":  "RESTAURANT",
+        "aliases":  [
+                        "台灣壽司郎",
+                        "壽司郎",
+                        "Sushiro"
                     ]
     },
     {
