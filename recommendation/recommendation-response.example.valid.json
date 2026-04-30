@@ -51,7 +51,6 @@
       "cashbackValue": 3.0,
       "estimatedReturn": 86,
       "matchedPromotionCount": 2,
-      "rankingMode": "STACK_ALL_ELIGIBLE",
       "reason": "中國信託 示例網購卡在此情境下命中 2 個可並存優惠，合計預估回饋 86 元。",
       "promotionId": "promo_456",
       "promoVersionId": "ver_789",
@@ -116,9 +115,15 @@
           "reason": "依 stackability metadata 判定可計入卡片總回饋。"
         }
       ],
-      "applyUrl": "https://affiliate.example.com/ctbc-linepay"
+      "applyUrl": "https://affiliate.example.com/ctbc-linepay",
+      "sourceUrl": "https://www.ctbcbank.com/example",
+      "verifiedAt": "2026-03-18T10:00:00Z",
+      "confidence": 0.92,
+      "activePlan": null,
+      "generalRewardOnly": false
     }
   ],
+  "noResultReasons": [],
   "generatedAt": "2026-03-18T14:30:00Z",
   "disclaimer": "CardSense 提供信用卡優惠比較資訊，不構成金融建議。實際回饋依各銀行公告為準，請以銀行官網資訊為最終依據。"
 }

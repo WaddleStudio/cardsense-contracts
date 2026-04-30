@@ -1,4 +1,4 @@
-﻿{
+{
     "GENERAL":  {
                     "category":  "ANY",
                     "description":  "Fallback subcategory when a more specific mapping is unavailable."
