@@ -5,7 +5,7 @@
   "description": "Schema for CardSense card-level recommendation responses.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["requestId", "scenario", "comparison", "recommendations", "generatedAt", "disclaimer"],
+  "required": ["requestId", "scenario", "comparison", "recommendations", "noResultReasons", "generatedAt", "disclaimer"],
   "properties": {
     "requestId": { "type": "string", "minLength": 8 },
     "scenario": { "$ref": "#/$defs/scenario" },
@@ -14,6 +14,21 @@
       "type": "array",
       "items": { "$ref": "#/$defs/cardRecommendation" },
       "maxItems": 50
+    },
+    "noResultReasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NO_ACTIVE_PROMOTIONS_FOR_DATE",
+          "NO_PROMOTIONS_MATCH_SCENARIO",
+          "NO_POSITIVE_REWARD_AFTER_CAPS",
+          "MERCHANT_FILTER_APPLIED",
+          "PAYMENT_METHOD_FILTER_APPLIED",
+          "CHANNEL_FILTER_APPLIED",
+          "CARD_FILTER_APPLIED"
+        ]
+      }
     },
     "generatedAt": { "type": "string", "format": "date-time" },
     "disclaimer": { "type": "string", "minLength": 8, "maxLength": 300 }
@@ -137,18 +152,20 @@
     "activePlan": {
       "type": ["object", "null"],
       "additionalProperties": false,
-      "required": ["planId", "planName", "switchRequired", "switchFrequency"],
+      "required": ["planId", "planName", "switchRequired", "switchFrequency", "requiresSubscription", "subscriptionCost"],
       "properties": {
         "planId": { "type": "string", "minLength": 3 },
         "planName": { "type": "string", "minLength": 1, "maxLength": 100 },
         "switchRequired": { "type": "boolean" },
-        "switchFrequency": { "type": "string", "minLength": 1, "maxLength": 60 }
+        "switchFrequency": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "requiresSubscription": { "type": "boolean" },
+        "subscriptionCost": { "type": ["string", "null"], "minLength": 1, "maxLength": 80 }
       }
     },
     "cardRecommendation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["cardCode", "cardName", "bankCode", "bankName", "cashbackType", "cashbackValue", "estimatedReturn", "matchedPromotionCount", "reason", "promotionId", "promoVersionId", "validUntil", "conditions", "promotionBreakdown"],
+      "required": ["cardCode", "cardName", "bankCode", "bankName", "cashbackType", "cashbackValue", "estimatedReturn", "matchedPromotionCount", "reason", "promotionId", "promoVersionId", "validUntil", "conditions", "promotionBreakdown", "applyUrl", "sourceUrl", "verifiedAt", "confidence", "activePlan", "generalRewardOnly"],
       "properties": {
         "cardCode": { "type": ["string", "null"], "minLength": 3 },
         "cardName": { "type": "string", "minLength": 1, "maxLength": 120 },
@@ -172,7 +189,11 @@
           "items": { "$ref": "#/$defs/promotionRewardBreakdown" }
         },
         "applyUrl": { "type": ["string", "null"], "format": "uri" },
+        "sourceUrl": { "type": ["string", "null"], "format": "uri" },
+        "verifiedAt": { "type": ["string", "null"], "format": "date-time" },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
         "activePlan": { "$ref": "#/$defs/activePlan" },
+        "generalRewardOnly": { "type": "boolean" },
         "rewardDetail": { "$ref": "#/$defs/rewardDetail" }
       }
     }

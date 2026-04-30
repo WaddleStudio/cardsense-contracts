@@ -36,6 +36,21 @@
       },
       "additionalProperties": { "type": "number", "minimum": 0 }
     },
+    "benefitPlanTiers": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 80 }
+    },
+    "activePlansByCard": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 120 }
+    },
+    "planRuntimeByCard": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 200 }
+      }
+    },
     "scenario": { "$ref": "#/$defs/scenario" },
     "comparison": { "$ref": "#/$defs/comparisonOptions" }
   },
