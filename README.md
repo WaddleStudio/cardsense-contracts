@@ -1,3 +1,8 @@
+> **Project status: Archived / Commercial No-Go (2026-09).**
+> Active product development and promotion-data maintenance have stopped.
+> The repositories are retained as engineering portfolio and reusable technical assets.
+> Promotion data is historical and is not guaranteed current. See [ARCHIVED.md](https://github.com/WaddleStudio/cardsense-api/blob/master/ARCHIVED.md) for rationale.
+
 # CardSense Contracts
 
 CardSense 平台的共用資料契約庫，作為所有資料結構的唯一真實來源（SSOT），防止 schema 漂移並支援平行開發。
@@ -94,4 +99,4 @@ cardsense-contracts/
 ## 已知限制
 
 - `POINTS` 型別尚未定義銀行別點數折現規則，目前沿用 `PERCENT` 計算路徑
-- `stackability` metadata 設計已完成，但部分銀行的實際標註資料仍在累積中
+- `stackability` metadata 設計已完成，但部分銀行的實際標註資料未完整，封存後不再累積
